@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+
+conan install . --profile ./conan_profile_windows_10.txt --output-folder=build --build=missing
+cd build
+cmake .. -G"Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release
+# might need to  rm CMakeCache.txt
+cmake --build .
