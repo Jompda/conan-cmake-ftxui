@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
+
 project(testing LANGUAGES CXX VERSION 1.0.0)
 
 find_package(ftxui 5 REQUIRED)
@@ -10,4 +11,3 @@ target_link_libraries(${PROJECT_NAME}
 	PRIVATE ftxui::component
 )
 
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
